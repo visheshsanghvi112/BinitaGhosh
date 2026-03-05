@@ -67,34 +67,53 @@ export default function App() {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-24 md:py-0">
-        <FadeIn>
-          <p className={`text-xs md:text-base uppercase tracking-[0.3em] mb-4 ${accentColor}`}>
-            HR Executive & Talent Acquisition Specialist
-          </p>
-          <h1 className="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.9] font-light tracking-tight mb-8">
-            Binita <br />
-            <span className="italic font-normal ml-8 md:ml-24">Gobinda</span> <br />
-            Ghosh
-          </h1>
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 md:items-center mt-12">
-            <div className="flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase opacity-80">
-              <MapPin size={16} />
-              <span>Diva East, Thane</span>
+      <header className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 md:px-12 lg:px-24 py-24 lg:py-0 gap-12">
+        
+        {/* Text Content */}
+        <div className="flex-1 flex flex-col justify-center items-start z-10 w-full">
+          <FadeIn>
+            <p className={`text-xs md:text-base uppercase tracking-[0.3em] mb-4 ${accentColor}`}>
+              HR Executive & Talent Acquisition Specialist
+            </p>
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] font-light tracking-tight mb-8">
+              Binita <br />
+              <span className="italic font-normal ml-8 md:ml-24">Gobinda</span> <br />
+              Ghosh
+            </h1>
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center mt-8 lg:mt-12">
+              <div className="flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase opacity-80">
+                <MapPin size={16} />
+                <span>Diva East, Thane</span>
+              </div>
+              <div className="hidden sm:block w-px h-4 bg-current opacity-30"></div>
+              <div className="flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase opacity-80">
+                <Mail size={16} />
+                <span>binitaghosh636@gmail.com</span>
+              </div>
             </div>
-            <div className="hidden md:block w-px h-4 bg-current opacity-30"></div>
-            <div className="flex items-center gap-3 text-xs md:text-sm tracking-widest uppercase opacity-80">
-              <Mail size={16} />
-              <span>binitaghosh636@gmail.com</span>
-            </div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+        </div>
+
+        {/* Image Content */}
+        <div className="flex-1 flex justify-center lg:justify-end items-center w-full max-w-md lg:max-w-full relative z-0 mt-8 lg:mt-0">
+           <FadeIn delay={0.2}>
+             <div className={`relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] max-h-[60vh] lg:max-h-[80vh] overflow-hidden rounded-sm border ${borderColor}`}>
+                {/* Replace src with your uploaded image path, e.g., "/hero.jpg" */}
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Binita Gobinda Ghosh" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+             </div>
+           </FadeIn>
+        </div>
 
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0"
         >
           <ChevronDown className="animate-bounce opacity-50" size={24} />
         </motion.div>
